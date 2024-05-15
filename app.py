@@ -7,7 +7,7 @@ app = Flask(__name__)
 db = SQLAlchemy()
 
 # configuration
-app.config["SQLALCHEMY_DATABASE_URI"] = environ.get('DB_URL')
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql+psycopg2://postgres_flask_db:postgres@localhost:5432/postgres_db'  # environ.get('DB_URL')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # import routes
